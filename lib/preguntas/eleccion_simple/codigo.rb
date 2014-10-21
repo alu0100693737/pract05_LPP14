@@ -8,6 +8,8 @@ module Preguntas
       @Op_incorrecta = args[:Op_incorrecta]
       
     end
+  end
+end
     
     
        
