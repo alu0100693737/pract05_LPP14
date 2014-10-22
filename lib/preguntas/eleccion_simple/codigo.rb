@@ -23,7 +23,3 @@ module Preguntas
     end
   end
 end
-    
-    
-       
-  
