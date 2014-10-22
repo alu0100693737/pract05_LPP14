@@ -17,12 +17,14 @@ module Preguntas
 		s= ''
 		opcion.each do |opcion|
 
-			s +=  %Q{<input type = "radio" value= "#{opcion}" name = 0 > #{opcion}\n}
-			html <<= -"HTML"
-			"#{@pregunta}"
-			"#{s}"
-			"HTML"		
-		end
+			s += %Q{<input type="radio" value= "#{opcion}" name = 0 > #{opcion}\n}
+		end	
+		
+		html <<= -"HTML"
+		"#{@pregunta}<br/>"
+		"#{s}"
+		"HTML"		
+	
 		
     end
   end
