@@ -4,9 +4,11 @@ module Preguntas
     
     def initialize args
       @pregunta = args[:pregunta]
+	raise ArgumentError , 'Specify :pregunta , :Op_correcta y :Op_incorrecta' unless @pregunta
       @Op_correcta = args[:Op_correcta]
+	raise ArgumentError , 'Specify :pregunta , :Op_correcta y :Op_incorrecta' unless @Op_correcta
       @Op_incorrecta = args[:Op_incorrecta]
-      
+        raise ArgumentError , 'Specify :pregunta , :Op_correcta y :Op_incorrecta' unless @Op_incorrecta
     end
     
     def to_html
