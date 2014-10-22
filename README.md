@@ -1,26 +1,12 @@
+Practica 5. Lenguajes y paradigmas de programacion.
+Desarrollo dirigido por pruebas.
+
+Practica hecha por:
+
+Fabian Díaz Lorenzo
+Ivan Garcia Campos
+
 # Preguntas::EleccionSimple
-
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'preguntas-eleccion_simple'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install preguntas-eleccion_simple
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
