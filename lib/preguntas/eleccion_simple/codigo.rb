@@ -12,15 +12,15 @@ module Preguntas
     def to_html
 		opcion = @Op_incorrecta+[@Op_correcta]
 		opcion = opcion.sample       
-		opcion= ''
+		s= ''
 		opcion.each do |opcion|
-		opcion +=  %Q{<input type = "radio" value= "#{opcion}" name = 0 > #{opcion}\n}
-		html = <<-"HTML"
-		#{@pregunta}#<br/>
-		#{opcion}
-		#HTML
-		
+		s +=  %Q{<input type = "radio" value= "#{opcion}" name = 0 > #{opcion}\n}
 		end
+		html <<= - "HTML"
+		"#{@pregunta}"
+		"#{s}"
+		"HTML"		
+		
 		
     end
   end
