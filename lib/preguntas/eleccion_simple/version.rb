@@ -1,5 +1,5 @@
 module Preguntas
-  module EleccionSimple
+  class EleccionSimple
     VERSION = "0.0.1"
   end
 end
