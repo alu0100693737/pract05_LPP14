@@ -13,19 +13,34 @@ module Preguntas
     
     def to_html
 		opcion = @Op_incorrecta+[@Op_correcta]
-		opcion = opcion.sample       
+		opcion = opcion.shuffle
 		s= ''
 		opcion.each do |opcion|
 
-			s += %Q{<input type="radio" value= "#{opcion}" name = 0 > #{opcion}\n}
+			s += %Q{<input type="radio" value= "#{opcion}" class = "EleccionSimple" name = 0 > #{opcion}\n}
 		end	
 		
-		html <<= -"HTML"
-		"#{@pregunta}<br/>"
-		"#{s}"
-		"HTML"		
-	
-		
+		#html <<= -"HTML"
+		"#{@pregunta}<br/> #{s}\n"
     end
+    
+    def to_gift
+    end
+    
+    def to_tex
+    end
+    
+    def to_s
+      opcion = @Op_incorrecta+[@Op_correcta]
+      opcion = opcion.shuffle
+      s= ''
+      opcion.each do |opcion|
+	
+	s += %Q{-#{opcion}\n}
+	
+      end
+	puts "#{@pregunta} \n #{s}\n"
+    end
+		
   end
 end

@@ -25,9 +25,33 @@ module Preguntas
 			context "cuando covertimos a " do
 				it " si podemos convertir a html" do
 					expect(@q).to respond_to :to_html
-					#it "tiene que producir un html razonable" do
-					#	expect(@q.to_html).to mach(/<input\stype="radio"/i)
-					#end
+					it "tiene que producir un html razonable" do
+					r = %r{
+					  (<input \s+
+					    type = "radio"\s+
+					    value ="\d+" \s+
+					    .*
+					    name = \d+>\s+\d+\s+
+					    ){4}
+					}x
+					  
+					expect(@q.to_html).to mach(r)
+					end
+					
+					it " tiene que contener la expresion r" do
+					  r = Regexp.escape @q.pregunta
+					  expect(@q.to_html).to match(r)
+					end
+				end
+				
+				it "puede convertirse a latex " do
+					  expect(@q).to respond_to :to_tex
+				end
+				
+							
+				it "puede mostrarse por pantalla" do
+				  expect(@q).to respond_to :to_s
+					  
 				end
 			
 			end
