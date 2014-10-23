@@ -54,6 +54,12 @@ module Preguntas
 				  expect(@q).to respond_to :to_s
 					  
 				end
+				
+# 				r = "Patas de un gato="
+				it "demostrando que to_s devuelve cadena" do	
+				  expect(@q.to_s).to match("Patas de un gato=")
+				end
+				  
 			
 			end
 				

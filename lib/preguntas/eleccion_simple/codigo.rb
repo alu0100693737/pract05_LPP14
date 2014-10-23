@@ -40,7 +40,7 @@ module Preguntas
 	s += %Q{-#{opcion}\n}
 	
       end
-	puts "#{@pregunta} \n #{s}\n"
+	 "#{@pregunta} \n #{s}\n"
 
 	
     end
