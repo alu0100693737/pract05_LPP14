@@ -1,3 +1,4 @@
+require 'pry'
 module Preguntas
   class EleccionSimple
     attr_accessor :pregunta, :Op_correcta, :Op_incorrecta
@@ -17,11 +18,11 @@ module Preguntas
 		s= ''
 		opcion.each do |opcion|
 
-			s += %Q{<input type="radio" value= "#{opcion}" class = "EleccionSimple" name = 0 > #{opcion}\n}
+			s += %Q{<input type="radio" value="#{opcion}" name = 0 > #{opcion}\n}
 		end	
 		
 		#html <<= -"HTML"
-		"#{@pregunta}<br/> #{s}\n"
+		"#{@pregunta}<br/>\n#{s}\n"
     end
     
     def to_gift
@@ -29,7 +30,7 @@ module Preguntas
     
     def to_tex
     end
-    
+
     def to_s
       opcion = @Op_incorrecta+[@Op_correcta]
       opcion = opcion.shuffle
@@ -40,6 +41,8 @@ module Preguntas
 	
       end
 	puts "#{@pregunta} \n #{s}\n"
+
+	
     end
 		
   end
